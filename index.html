@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Divider</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- CSS File -->
+</head>
+<body>
+  <div class="container">
+    <div class="card" id="text-divider-app">
+      <header class="flex-header">
+        <h2>Text Divider</h2>
+        <div class="button-group">
+          <button id="toggle-dark-mode" aria-label="Toggle Dark Mode" class="small-button">🌙</button>
+          <button id="donate-button" class="small-button">Donations</button>
+        </div>
+      </header>
+      <div class="bg-primary-light">
+        <p>Welcome to the Text Divider. Paste your text, set the number of characters per division, and click "Divide Text" to get started.</p>
+      </div>
+      <label for="input-text">Text to divide:</label>
+      <textarea id="input-text" rows="5" placeholder="Paste your text here..."></textarea>
+      <p>Total characters: <span id="char-total">0</span></p>
+
+      <label for="char-count">Number of characters per division:</label>
+      <input id="char-count" type="number" value="100" min="1">
+
+      <button id="divide-text">Divide Text</button>
+    </div>
+
+    <div class="card" id="divided-text-card" style="display: none;">
+      <header>
+        <h2>Divided Text</h2>
+      </header>
+      <div id="divided-text-container"></div>
+    </div>
+
+    <!-- Modal for Donations -->
+    <div id="donation-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <button class="close-modal" id="close-modal">✖</button>
+        <h3>Support Our Project</h3>
+        <p>Help us maintain this site ad-free and operational by making a donation:</p>
+        <ul>
+          <li><strong>Bizum:</strong> 666666666</li>
+          <li><strong>Ethereum Wallet:</strong> 0x123456789ABCDEF123456789ABCDEF1234567890</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script> <!-- JavaScript File -->
+</body>
+</html>

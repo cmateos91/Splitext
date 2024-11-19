@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif; /* Fuente atractiva y legible */
+  background: linear-gradient(180deg, #e3f2fd, #ffffff); /* Degradado suave */
+  color: #333; /* Texto oscuro para fondo claro */
+  transition: background-color 0.3s, color 0.3s;
+}
+body.dark {
+  background-color: #1a202c;
+  color: white; /* Texto claro para fondo oscuro */
+}
+
+.card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  color: inherit; /* Hereda el color actual del tema */
+  border-radius: 10px; /* Bordes suaves */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para tarjetas */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+body.dark .card {
+  background-color: #2d3748;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.small-button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  background-color: white; /* Fondo fijo en tema claro */
+  color: #333; /* Texto oscuro en el modal */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+body.dark .modal {
+  background-color: #2d3748;
+  color: white; /* Texto claro en tema oscuro */
+}
+
+/* Encabezados y contenido del modal */
+.modal h3, .modal p, .modal ul {
+  color: inherit; /* Hereda el color del modal */
+}
+.modal ul li strong {
+  color: inherit; /* Hereda el color del modal */
+}
+
+/* Botón para cerrar el modal */
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0.5rem; /* Ajusta más cerca del borde superior */
+  right: 0.5rem; /* Ajusta más cerca del borde derecho */
+  width: auto; /* Ajusta el área clicable */
+  height: auto;
+  color: inherit; /* Hereda el color del modal */
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+}
+
+
+.bg-primary-light {
+  background-color: rgba(0, 123, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  color: #004085; /* Texto más oscuro para fondo claro */
+}
+body.dark .bg-primary-light {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #cce5ff; /* Texto más claro para fondo oscuro */
+}
+
+h2 {
+  color: #333; /* Oscuro por defecto */
+  font-weight: 700; /* Destacado */
+  border-bottom: 2px solid #022447; /* Línea subrayada */
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+body.dark h2 {
+  color: white; /* Claro en tema oscuro */
+  border-bottom: 2px solid #069ec9; /* Línea subrayada clara en tema oscuro */
+}
+
+label, p {
+  color: #333; /* Oscuro por defecto */
+}
+body.dark label, body.dark p {
+  color: white; /* Claro en tema oscuro */
+}
+
+.chunk {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  background-color: #f9f9f9;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+body.dark .chunk {
+  background-color: #2d3748;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+textarea, input {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+body.dark textarea, body.dark input {
+  background-color: #2d3748;
+  color: white;
+  border-color: #444;
+}
+
+button {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+button:hover {
+  transform: translateY(-2px); /* Efecto de elevación */
+  filter: brightness(1.1);
+}
+
+small {
+  color: #666; /* Pequeños detalles con buen contraste */
+}
+body.dark small {
+  color: #ccc;
+}
